@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 import pandas as pd
 import requests
 import pymongo
-from flask import Flask
+from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import time
 
@@ -43,18 +43,17 @@ featured_image = soup.find_all("img", class_ = "headerimage fade-in")[0]["src"]
 featured_image_url = mars_url + "/" + featured_image
 print(featured_image_url)
 
-jpl = {"featured_image_url":featured_image_url}
-scraped_data["img_url"] = featured_image_url
+jpl = {"ImageURL":featured_image_url}
+scraped_data["ImageURL"] = featured_image_url
 
 browser.quit()
 
 # Mars Facts
 facts_url = "https://galaxyfacts-mars.com/"
 facts_data = pd.read_html(facts_url)
-facts_data
 facts_df = facts_data[0]
 facts_table = facts_df.to_html(index=False)
-facts_table.replace("\n", "")
+# facts_table.replace("\n", "")
 mars_facts = {"htmlTable":facts_data}
 scraped_data["htmlTable"] = facts_df.to_html
 
@@ -88,7 +87,7 @@ for i in range( len( hemi_title)):
     usgs.append({ 'title':hemi_title[i], 'img_url':hemi_img_urls[i]})
 
 # Dictionary of all Mars Info Scraped
-mars_dict ={"Title": news_title, "Paragraph": news_p, "featured_image_url": featured_image_url, 
-            "facts_table": facts_table, "hem_url":hem_url}
+mars_dict ={"Title": news_title, "Paragraph": news_p, "ImageURL": featured_image_url, 
+            "Table": facts_table, "ListImages":hemi_img_urls}
 
 browser.quit()
