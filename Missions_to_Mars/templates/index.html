@@ -20,16 +20,18 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
     </div>
   </div>
-  <div>
-    <div class="container-fluid">
 
-
-    </div>
-
-
-
-  </div>
-
+  <div class="container">
+    <div class="row">
+        <h3 id="headline">Latest Mars News</h3>
+        <div class="row">
+            <h6>{{ data_db.Title }}</h6>
+            <p>{{ data_db.Paragraph }}</p>
+        </div>
+        <div class="col-lg-8 summary">
+            <h3>Featured Mars Image</h3>
+            <img class="img-fluid" src="{{ data_db.ImageURL }}" style="width:100%">
+        </div>
 
 
 
