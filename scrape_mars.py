@@ -104,8 +104,9 @@ for i in range( len( hemi_title)):
 
 usgs
 
-browser.quit()
 
 mars_dict ={"news_title": news_title, "news_p": news_p, "featured_image_url": featured_image_url, 
             "facts_table": facts_table, "hem_url":hem_url}
 mars_dict
+
+browser.quit()
