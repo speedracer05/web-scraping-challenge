@@ -1,5 +1,8 @@
-# Web-scraping-challenge
-Web application that scrapes various websites for data related to the Mission to Mars
+# Web Scraping Homework - Mission to Mars
+## University of Davis Data Analytics and Visualization Boot Camp 2021
+This repository contains a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
+<src img=">
+## 
 
 
 ## Sources
