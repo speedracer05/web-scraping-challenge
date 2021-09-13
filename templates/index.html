@@ -17,7 +17,7 @@
   <div class="container-fluid">
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape_mars.py" role="button">Scrape New Data!</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
     </div>
   </div>
 
@@ -25,8 +25,8 @@
     <div class="row">
         <h3 id="headline">Latest Mars News</h3>
         <div class="row">
-            <h6>{{ mars_dict.news_title }}</h6>
-            <p>{{ mars_dict.news_p }}</p>
+            <h6>{{ mars_dict.Title }}</h6>
+            <p>{{ mars_dict.Paragraph }}</p>
         </div>
         <div class="col-lg-8 summary">
             <h3>Featured Mars Image</h3>
@@ -57,7 +57,7 @@
                       {% for data in mars_dict.ListImages %}
                       <div class="row">
                           <div class="col">
-                              <img class="img-fluid" src="{{ data.img_url }}" style="width:100%">
+                              <img class="img-fluid" src="{{ mars_dict.ListImages }}" style="width:100%">
                               <br /><br />
                               <p>{{data.title}}</p>
                               <br />

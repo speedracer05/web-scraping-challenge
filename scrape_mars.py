@@ -44,7 +44,7 @@ featured_image_url = mars_url + "/" + featured_image
 print(featured_image_url)
 
 jpl = {"featured_image_url":featured_image_url}
-scraped_data["featured_image_url"] = featured_image_url
+scraped_data["img_url"] = featured_image_url
 
 browser.quit()
 
@@ -88,7 +88,7 @@ for i in range( len( hemi_title)):
     usgs.append({ 'title':hemi_title[i], 'img_url':hemi_img_urls[i]})
 
 # Dictionary of all Mars Info Scraped
-mars_dict ={"news_title": news_title, "news_p": news_p, "featured_image_url": featured_image_url, 
+mars_dict ={"Title": news_title, "Paragraph": news_p, "featured_image_url": featured_image_url, 
             "facts_table": facts_table, "hem_url":hem_url}
 
 browser.quit()
