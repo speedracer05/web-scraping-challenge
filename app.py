@@ -21,8 +21,16 @@ def home():
 @app.route("/scrape")
 def scrape():
 
+    mars_dict = mongo.db.mars_dict
+    
     # Run scrape function
-    mars_dict = mongo.db.scrape_info()
+   mars_data = scrape_mars.scrape()
 
     # Update Mongo database using update and upsert=True
-    mars_dict.db.collection.
+    mars_dict.db.collection.update({}, mars_data, upsert=True)
+
+    # Redirect back to home page
+    return redirect("/")
+
+if __name__ == "__main__":
+    app.run(debug=True)
