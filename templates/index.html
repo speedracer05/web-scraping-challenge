@@ -25,8 +25,8 @@
     <div class="row">
         <h3 id="headline">Latest Mars News</h3>
         <div class="row">
-            <h6>{{ mars_dict.Title }}</h6>
-            <p>{{ mars_dict.Paragraph }}</p>
+            <h6>{{ mars_dict.news_title }}</h6>
+            <p>{{ mars_dict.news_p }}</p>
         </div>
         <div class="col-lg-8 summary">
             <h3>Featured Mars Image</h3>
@@ -38,7 +38,7 @@
               <h5>Mars Facts</h5>
               <div class="table-responsive">
                   <div class="table table-striped">
-                      {{ mars_dict.TableHTML|safe}}
+                      {{ mars_dict.facts_table|safe}}
                   </div>
               </div>
           </div>
