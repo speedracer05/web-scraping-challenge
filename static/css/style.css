@@ -1,4 +1,7 @@
-  
+body{
+	background-color: lightgray;
+}
+
 table {
   display: table;
   border-collapse: separate;
@@ -6,3 +9,44 @@ table {
   border-color: gray
   
 }
+
+.container{
+  /* border: 1px solid blue; */
+  padding: 5px;
+  margin-top: 20px;
+  background-color: white;
+  /* margin-right: 5%; */
+}
+
+.row {
+  /* border: 1px purple solid; */
+  /* border-style: solid; */
+  /* border-color:purple; */
+  /* background-color: white; */
+  padding: 5px;
+  margin: 10px;
+}
+
+h3{
+  /* border: 1px pink solid; */
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-weight: bold;
+  /* margin-left: 35px; */
+  /* margin-bottom: 25px; */
+  /* padding: 15px; */
+  /* font-size: 40px; */
+  /* color: darkcyan; */
+  background-color: none;
+  text-align: left;
+  text-decoration: none;
+  /* display: inline; */
+  white-space: nowrap;
+  /* border-style: solid; */
+  /* border-color: tomato; */
+}
+
+h5 {
+  margin-top: 10px;
+}
+
+

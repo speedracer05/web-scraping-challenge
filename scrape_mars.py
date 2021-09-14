@@ -91,3 +91,7 @@ mars_dict ={"Title": news_title, "Paragraph": news_p, "ImageURL": featured_image
             "Table": facts_table, "ListImages":hemi_img_urls}
 
 browser.quit()
+
+if __name__ == "__main__":
+
+    print(scrape_all())
