@@ -1,9 +1,4 @@
-import pandas as pd
-from flask import (
-    Flask, 
-    render_template, 
-    request, 
-    redirect)
+from flask import (Flask, render_template, request, redirect)
 from flask_pymongo import PyMongo
 import scrape_mars
 
